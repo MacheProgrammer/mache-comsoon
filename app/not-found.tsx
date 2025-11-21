@@ -1,33 +1,25 @@
-"use client";
 import GradientText from "@/components/GradientText";
 import LetterGlitch from "@/components/LetterGlitch";
-import Shuffle from "@/components/Shuffle";
-
-export default function Home() {
+import Link from "next/link";
+export default function NotFound() {
   return (
-    <div className="relative h-dvh">
+    <div className="flex h-dvh flex-col items-center justify-center">
       <div className="z-10 flex h-full w-full flex-col items-center justify-center gap-6">
-        <Shuffle
-          text="Coming Soon"
-          shuffleDirection="right"
-          duration={1.05}
-          animationMode="evenodd"
-          shuffleTimes={1}
-          ease="power3.out"
-          stagger={0.03}
-          threshold={0.1}
-          respectReducedMotion={true}
-          loop
-          className="font-bold text-white"
-        />
         <GradientText
           colors={["#40ffaa, #4079ff, #40ffaa, #4079ff, #40ffaa"]}
           animationSpeed={5}
           showBorder={false}
-          className="-mt-6 bg-black/30 px-4 py-2 text-5xl font-black"
+          className="-mt-6 bg-black/30 px-4 py-2 text-center text-5xl font-black"
         >
-          MACHE WEB !
+          Ups, halaman yang kamu cari tidak tersedia, yuk kembali ke halaman
+          utama!
         </GradientText>
+        <Link
+          href="/"
+          className="rounded-2xl bg-linear-to-br from-sky-500 to-emerald-500 px-4 py-2 text-2xl font-bold text-white transition-transform duration-300 ease-in-out hover:scale-110 active:scale-90"
+        >
+          Kembali ke halaman utama
+        </Link>
       </div>
       <LetterGlitch
         glitchSpeed={50}
