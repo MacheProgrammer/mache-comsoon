@@ -1,0 +1,72 @@
+.aladin-scope {
+  --bg-main: #fff7e1; /* pasir terang */
+  --bg-secondary: #ffe8b0;
+
+  --dune-back: #f9e2a0;
+  --dune-mid: #ffb347;
+  --dune-front: #a56a2a;
+
+  --text-main: #3b240b;
+  --text-custom: #fff1b8;
+}
+
+/* Dark Mode = Arabian Night */
+.dark .aladin-scope {
+  --bg-main: #2b1b4d; /* midnight */
+  --bg-secondary: #3a206b;
+
+  --dune-back: #2b1b4d;
+  --dune-mid: #6e245e;
+  --dune-front: #ffb347;
+
+  --text-main: #fff1b8;
+  --text-custom: #3b240b;
+}
+
+/* Background helper */
+.aladin-bg {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(255, 179, 71, 0.25),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 20% 30%,
+      rgba(161, 58, 143, 0.35),
+      transparent 45%
+    ),
+    linear-gradient(135deg, var(--bg-main) 0%, var(--bg-secondary) 100%);
+}
+
+/* Typography tweak */
+.aladin-title {
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.aladin-modal {
+  /* background-color: var(--dune-front); */
+  color: var(--text-main);
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.aladin-modal-overlay {
+  /* background: rgba(0, 0, 0, 0.45); */
+  backdrop-filter: blur(6px);
+}
+
+/* Payment card */
+.payment-card {
+  background-color: var(--bg-secondary);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
+}
+
+/* Accent highlight */
+.payment-highlight {
+  background: linear-gradient(135deg, var(--dune-mid), var(--dune-front));
+  color: black;
+}

@@ -1,5 +1,6 @@
 import GradientText from "@/components/GradientText";
 import LetterGlitch from "@/components/LetterGlitch";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 export default function NotFound() {
   return (
@@ -14,12 +15,14 @@ export default function NotFound() {
           Ups, halaman yang kamu cari tidak tersedia, yuk kembali ke halaman
           utama!
         </GradientText>
-        <Link
-          href="/"
-          className="rounded-2xl bg-linear-to-br from-sky-500 to-emerald-500 px-4 py-2 text-2xl font-bold text-white transition-transform duration-300 ease-in-out hover:scale-110 active:scale-90"
-        >
-          Kembali ke halaman utama
-        </Link>
+        <Button variant="default" className="px-6 py-6">
+          <Link
+            href="/"
+            className="rounded-2xl bg-linear-to-br text-xl font-bold text-white"
+          >
+            Kembali ke halaman utama
+          </Link>
+        </Button>
       </div>
       <LetterGlitch
         glitchSpeed={50}
